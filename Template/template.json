@@ -1,4 +1,30 @@
 [  
+    {  
+    "type": 1,
+    "title": "heimdall",
+    "description": "Heimdall is a way to organise all those links to your most used web sites and web applications in a simple way.",
+    "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/heimdall-icon.png",
+    "image": "linuxserver/heimdall:latest",
+    "categories": ["Tools", "Web", "Other"],
+    "platform": "linux",
+    "ports": [  
+      "80/tcp",
+      "443/tcp"
+    ],
+    "volumes": [{"container": "/config"}],
+    "env": [  
+      {  
+        "name":"PUID",
+        "label":"PUID",
+        "set":"1000"
+      },
+      {  
+        "name":"PGID",
+        "label":"PGID",
+        "set":"1000"
+      }
+    ]
+  },
   {  
     "type": 1,
     "title": "booksonic",
@@ -502,32 +528,6 @@
         "name":"PGID",
         "label":"PGID",
         "set":""
-      }
-    ]
-  },
-  {  
-    "type": 1,
-    "title": "heimdall",
-    "description": "Heimdall is a way to organise all those links to your most used web sites and web applications in a simple way.",
-    "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/heimdall-icon.png",
-    "image": "linuxserver/heimdall:latest",
-    "categories": ["Tools", "Web", "Other"],
-    "platform": "linux",
-    "ports": [  
-      "80/tcp",
-      "443/tcp"
-    ],
-    "volumes": [{"container": "/config"}],
-    "env": [  
-      {  
-        "name":"PUID",
-        "label":"PUID",
-        "set":"1000"
-      },
-      {  
-        "name":"PGID",
-        "label":"PGID",
-        "set":"1000"
       }
     ]
   },
