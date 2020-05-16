@@ -9,8 +9,8 @@
     "platform": "linux",
     "name": "heimdall",
     "ports": [  
-      "80/tcp",
-      "443/tcp"
+      "8000:80/tcp",
+      "8443:443/tcp"
     ],
     "volumes": [{"container": "/config"}],
     "env": [  
