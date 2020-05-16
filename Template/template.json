@@ -1,59 +1,6 @@
 [  
   {  
     "type": 1,
-    "title": "htpcmanager",
-    "description": "Htpcmanager, a front end for many htpc related applications. Hellowlol version.",
-    "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/htpcmanager-icon.png",
-    "image": "linuxserver/htpcmanager:latest",
-    "categories": ["Video", "Music", "Other"],
-    "platform": "linux",
-    "ports": [  
-      "8085/tcp"
-    ],
-    "volumes": [{"container": "/config"}],
-    "env": [  
-      {  
-        "name":"PGID",
-        "label":"PGID",
-        "set":""
-      },
-      {  
-        "name":"PUID",
-        "label":"PUID",
-        "set":""
-      }
-    ]
-  },
-  {  
-    "type": 1,
-    "title": "jackett",
-    "description": "Jackett works as a proxy server it translates queries from apps like Sonarr etc into tracker-site-specific http queries and parses the html response sending results back to the requesting software.[",
-    "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/jacket-icon.png",
-    "image": "linuxserver/jackett:latest",
-    "categories": ["Downloaders", "Tools"],
-    "platform": "linux",
-    "ports": [  
-      "9117/tcp"
-    ],
-    "volumes": [
-      {"container": "/config"},
-      {"container": "/downloads"}
-    ],
-    "env": [  
-      {  
-        "name":"PUID",
-        "label":"PUID",
-        "set":""
-      },
-      {  
-        "name":"PGID",
-        "label":"PGID",
-        "set":""
-      }
-    ]
-  },
-  {  
-    "type": 1,
     "title": "booksonic",
     "description": "Booksonic is a server and an app for streaming your audiobooks to any pc or android phone. Most of the functionality is also availiable on other platforms that have apps for subsonic",
     "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/booksonic.png",
