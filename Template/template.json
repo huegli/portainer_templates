@@ -8,11 +8,17 @@
     "categories": ["Tools", "Web", "Other"],
     "platform": "linux",
     "name": "heimdall",
+    "restart_policy": "unless-stopped",
     "ports": [  
       "8000:80/tcp",
       "8443:443/tcp"
     ],
-    "volumes": [{"container": "/config"}],
+    "volumes": [
+        {
+          "container": "/config",
+          "bind": "/data/Documents/LinuxServerApps/heimdall"
+        }
+    ],
     "env": [  
       {  
         "name":"PUID",
