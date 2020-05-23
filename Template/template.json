@@ -35,7 +35,7 @@
   {  
     "type": 1,
     "title": "plex",
-    "description": "Your favorite movies, TV, music, web shows, podcasts, and more, all streamed to your favorite screens.",
+    "description": "Your favorite movies, TV, music, web shows, podcasts, and more, all streamed to your favorite screens.",,
     "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/plex-icon.png",
     "image": "linuxserver/plex:latest",
     "categories": ["Video", "Music", "Photos"],
