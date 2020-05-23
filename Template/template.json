@@ -40,22 +40,51 @@
     "image": "linuxserver/plex:latest",
     "categories": ["Video", "Music", "Photos"],
     "platform": "linux",
-    "volumes": [{"container": "/config"}],
+    "name": "plex",    
+    "restart_policy": "unless-stopped",
+    "network": "host",
+    "volumes": [
+        {
+           "container": "/config",
+           "bind": "/data/Documents/LinuxServerApps/Plex"
+        },
+        {
+           "container": "/tv",
+           "bind": "/data/Videos/Plex_TV_Shows"
+        },        
+        {
+           "container": "/movies",
+           "bind": "/data/Videos/Plex_Movies"
+        },        
+        {
+           "container": "/music",
+           "bind": "/data/Music/Plex_Music"
+        },        
+        {
+           "container": "/youtube",
+           "bind": "/data/Music/Plex_YouTube"
+        }        
+     ],
     "env": [  
       {  
         "name":"PUID",
         "label":"PUID",
-        "set":""
+        "default":"1000"
       },
       {  
         "name":"PGID",
         "label":"PGID",
-        "set":""
+        "default":"1000"
       },
       {  
         "name":"VERSION",
         "label":"VERSION",
-        "set":"latest"
+        "default":"docker"
+      },
+      {  
+        "name":"UMASK_SET",
+        "label":"UMASK_SET",
+        "default":"022"
       }
     ]
   },
