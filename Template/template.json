@@ -21,6 +21,11 @@
     ],
     "env": [  
       {  
+        "name":"TZ",
+        "label":"TZ",
+        "default":"America/Los_Angeles"
+      },
+      {  
         "name":"PUID",
         "label":"PUID",
         "default":"1000"
@@ -28,7 +33,7 @@
       {  
         "name":"PGID",
         "label":"PGID",
-        "default":"1000"
+        "default":"100"
       }
     ]
   },
@@ -67,6 +72,11 @@
      ],
     "env": [  
       {  
+        "name":"TZ",
+        "label":"TZ",
+        "default":"America/Los_Angeles"
+      },
+      {  
         "name":"PUID",
         "label":"PUID",
         "default":"1000"
@@ -74,7 +84,7 @@
       {  
         "name":"PGID",
         "label":"PGID",
-        "default":"1000"
+        "default":"100"
       },
       {  
         "name":"VERSION",
