@@ -57,12 +57,12 @@
            "bind": "/data/Videos/Plex_Movies"
         },        
         {
-           "container": "/music",
-           "bind": "/data/Music/Plex_Music"
+           "container": "/youtube",
+           "bind": "/data/Videos/Plex_YouTube"
         },        
         {
-           "container": "/youtube",
-           "bind": "/data/Music/Plex_YouTube"
+           "container": "/music",
+           "bind": "/data/Music/Plex_Music"
         }        
      ],
     "env": [  
