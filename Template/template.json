@@ -100,6 +100,63 @@
   },
   {  
     "type": 1,
+    "title": "Calibre",
+    "description": "Calibre is a desktop app for managing eBooks.\n\n  [br][br]\n  [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]\n  [b]/config[/b] Where Calibre-web should store it's database[br]\n  [b]/books[/b] Path to your calibre library metadata.db file[br]",
+    "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/calibre-web-icon.png",
+    "image": "linuxserver/calibre-web:latest",
+    "categories": ["Cloud", "Books"],
+    "platform": "linux",
+    "name": "calibre",    
+    "restart_policy": "unless-stopped",
+    "ports": [  
+      "8080/tcp",
+      "8081/tcp"
+    ],
+    "volumes": [  
+        {
+           "container": "/books",
+           "bind": "/data/Documents/DropBox/Calibre"
+        },
+        {
+           "container": "/config",
+           "bind": "/data/Documents/LinuxServerApps/calibre"
+        }
+    ],
+    "env": [  
+      {  
+        "name":"TZ",
+        "label":"TZ",
+        "default":"America/Los_Angeles"
+      },
+      {  
+        "name":"PUID",
+        "label":"PUID",
+        "default":"1000"
+      },
+      {  
+        "name":"PGID",
+        "label":"PGID",
+        "default":"100"
+      },
+      {  
+        "name":"GUAC_USER",
+        "label":"GUAC_USER",
+        "default":"calibre"
+      },
+      {  
+        "name":"GUAC_PASS",
+        "label":"GUAC_PASS",
+        "default":"900150983cd24fb0d6963f7d28e17f72"
+      },
+      {  
+        "name":"UMASK_SET",
+        "label":"UMASK_SET",
+        "set":"022"
+      }
+    ]
+  },
+  {  
+    "type": 1,
     "title": "booksonic",
     "description": "Booksonic is a server and an app for streaming your audiobooks to any pc or android phone. Most of the functionality is also availiable on other platforms that have apps for subsonic",
     "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/booksonic.png",
