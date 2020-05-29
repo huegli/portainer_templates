@@ -101,16 +101,16 @@
   {  
     "type": 1,
     "title": "Calibre",
-    "description": "Calibre is a desktop app for managing eBooks.\n\n  [br][br]\n  [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]\n  [b]/config[/b] Where Calibre-web should store it's database[br]\n  [b]/books[/b] Path to your calibre library metadata.db file[br]",
+    "description": "Calibre is a desktop app for managing eBooks.",
     "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/calibre-web-icon.png",
-    "image": "linuxserver/calibre-web:latest",
+    "image": "linuxserver/calibre:latest",
     "categories": ["Cloud", "Books"],
     "platform": "linux",
     "name": "calibre",    
     "restart_policy": "unless-stopped",
     "ports": [  
-      "8080/tcp",
-      "8081/tcp"
+      "8080:8080/tcp",
+      "8081:8081/tcp"
     ],
     "volumes": [  
         {
@@ -151,7 +151,7 @@
       {  
         "name":"UMASK_SET",
         "label":"UMASK_SET",
-        "set":"022"
+        "default":"022"
       }
     ]
   },
