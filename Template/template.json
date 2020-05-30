@@ -1,9 +1,9 @@
 [  
   {  
     "type": 1,
-    "title": "heimdall",
-    "description": "Heimdall is a way to organise all those links to your most used web sites and web applications in a simple way.",
-    "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/heimdall-icon.png",
+    "title": "CLI Development Environment",
+    "description": "A command line environment based on the LinuxServer.io OpenSSH container",
+    "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/mcmyadmin-icon.png",
     "image": "linuxserver/openssh-server:latest",
     "categories": ["Tools", "Shell"],
     "platform": "linux",
@@ -40,9 +40,9 @@
         "default":"100"
       },
       {  
-        "name":"PUBLIC_KEY",
-        "label":"PUBLIC_KEY",
-        "default":"AAAAB3NzaC1yc2EAAAADAQABAAACAQCphN07vkWHzyylntuknb+zSbOlgrwPmmwOMnNsMpRNnu03O5U8FQiQXgZuH24eJLYSPEqN9H55qVrU/E6RDrL6elrRwODBIBIuMbANONdNFCRHITc/Sh5z0zNM/r0Az3Eqah4Lo+5xJfFpRqB08DbZb2OttxdPe3syDv7QnibOCZRLy0iJuuGZvptA5ubZRbDlwezQNeLN7vCbmSvZ9MX4uPo8zikIsmRqarBXLujvb0Jy7cQhxGjWcVIXF7YB4JSIManzXfBdminvcuhE9Pilx9xZz0ulXaRO2u9cLgJFQyLwhYlW8GXJWEYWklKGGR57tdxhE2KfVtUhvus0sND4EIvkv976VtBUk6hLSIrUGoABHEtPdAPzWeBhZ1aaKym0o/I9BaRqwcPC5IK53Dy9DzTJALdJkXmC5SwATeIx7I4ZfOfGxo4LuXLRzxbVxwGNlHsNKz3zXIfNhYMS0JUb+iBTXDHq9b2NldsW3sYycEOLJ2em0ZwIiEnixaL36QC28ygy3i7Mwf5+AoeO027Xnh9ZSHNG2o4Jh5jwq5Gsz9EqXekjqq6lb7yn/fHRWfOi95guixqA+d5wriHwElF7cjYS1NgSYZ9zUr5vKBkckxVJhAHsO0kcHMZpzGlf/cduIJmFgm1pT3WvIRAdJzsO4t4TwkluEU8rxCl5glGxwQ=="
+        "name":"PUBLIC_KEY_FILE",
+        "label":"PUBLIC_KEY_FILE",
+        "default":"/data/Documents/DrobBox/devenv.pub"
       },
       {  
         "name":"PASSWORD_ACCESS",
@@ -52,7 +52,7 @@
       {  
         "name":"USER_NAME",
         "label":"USER_NAME",
-        "default":"password"
+        "default":"nikolai"
       },
       {  
         "name":"USER_PASSWORD",
