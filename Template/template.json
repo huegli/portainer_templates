@@ -42,7 +42,7 @@
       {  
         "name":"PUBLIC_KEY_FILE",
         "label":"PUBLIC_KEY_FILE",
-        "default":"/data/Documents/DrobBox/devenv.pub"
+        "default":"/data/Documents/DropBox/devenv.pub"
       },
       {  
         "name":"PASSWORD_ACCESS",
