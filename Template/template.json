@@ -7,6 +7,7 @@
     "image": "linuxserver/openssh-server:latest",
     "categories": ["Tools", "Shell"],
     "platform": "linux",
+    "hostname": "xnas",
     "name": "cli-devenv",
     "restart_policy": "unless-stopped",
     "ports": [  
@@ -17,6 +18,10 @@
         {
           "container": "/config",
           "bind": "/data/Documents/LinuxServerApps/Cli-DevEnv"
+        },
+        {
+          "container": "/var/run/docker.sock",
+          "bind": "/var/run/docker.sock"
         },
         {
           "container": "/Documents",
@@ -47,7 +52,7 @@
       {  
         "name":"PASSWORD_ACCESS",
         "label":"PASSWORD_ACCESS",
-        "default":"true"
+        "default":"false"
       },
       {  
         "name":"USER_NAME",
@@ -57,7 +62,7 @@
       {  
         "name":"USER_PASSWORD",
         "label":"USER_PASSWORD",
-        "default":"password"
+        "default":""
       },
       {  
         "name":"SUDO_ACCESS",
