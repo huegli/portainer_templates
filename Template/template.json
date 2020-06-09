@@ -235,7 +235,7 @@
     "image": "linuxserver/calibre-web:latest",
     "categories": ["Cloud", "Books"],
     "platform": "linux",
-    "name": "calibre",    
+    "name": "calibre-web",    
     "restart_policy": "unless-stopped",
     "ports": [  
       "8083:8083/tcp"
