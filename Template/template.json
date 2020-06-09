@@ -230,13 +230,15 @@
   {  
     "type": 1,
     "title": "calibre-web",
-    "description": "Calibre Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.\n\n  [br][br]\n  [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]\n  [b]/config[/b] Where Calibre-web should store it's database[br]\n  [b]/books[/b] Path to your calibre library metadata.db file[br]",
+    "description": "Calibre Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.",
     "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/calibre-web-icon.png",
     "image": "linuxserver/calibre-web:latest",
     "categories": ["Cloud", "Books"],
     "platform": "linux",
+    "name": "calibre",    
+    "restart_policy": "unless-stopped",
     "ports": [  
-      "8083/tcp"
+      "8083:8083/tcp"
     ],
     "volumes": [  
         {
@@ -245,7 +247,7 @@
         },
         {
            "container": "/config",
-           "bind": "/data/Documents/LinuxServerApps/calibre"
+           "bind": "/data/Documents/LinuxServerApps/calibre-web"
         }
     ],
     "env": [  
