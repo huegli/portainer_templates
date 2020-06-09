@@ -229,6 +229,50 @@
   },
   {  
     "type": 1,
+    "title": "calibre-web",
+    "description": "Calibre Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.\n\n  [br][br]\n  [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]\n  [b]/config[/b] Where Calibre-web should store it's database[br]\n  [b]/books[/b] Path to your calibre library metadata.db file[br]",
+    "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/calibre-web-icon.png",
+    "image": "linuxserver/calibre-web:latest",
+    "categories": ["Cloud", "Books"],
+    "platform": "linux",
+    "ports": [  
+      "8083/tcp"
+    ],
+    "volumes": [  
+        {
+           "container": "/books",
+           "bind": "/data/Documents/DropBox/Calibre"
+        },
+        {
+           "container": "/config",
+           "bind": "/data/Documents/LinuxServerApps/calibre"
+        }
+    ],
+    "env": [  
+      {  
+        "name":"TZ",
+        "label":"TZ",
+        "default":"America/Los_Angeles"
+      },
+      {  
+        "name":"PUID",
+        "label":"PUID",
+        "default":"1000"
+      },
+      {  
+        "name":"PGID",
+        "label":"PGID",
+        "default":"100"
+      },
+      {  
+        "name":"UMASK_SET",
+        "label":"UMASK_SET",
+        "default":"022"
+      }
+    ]
+  },
+  {  
+    "type": 1,
     "title": "booksonic",
     "description": "Booksonic is a server and an app for streaming your audiobooks to any pc or android phone. Most of the functionality is also availiable on other platforms that have apps for subsonic",
     "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/booksonic.png",
