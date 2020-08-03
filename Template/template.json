@@ -304,7 +304,7 @@
     "volumes": [  
         {
            "container": "/books",
-           "bind": "/data/Documents/DropBox/Calibre"
+           "volume": "CalibreLib"
         },
         {
            "container": "/config",
