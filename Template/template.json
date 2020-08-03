@@ -257,8 +257,8 @@
            "bind": "/data/Documents/Calibre_Library"
         },
         {
-           "container": "/dropbox",
-           "bind": "/data/Documents/DropBox/Downloads"
+           "container": "/data",
+           "volume": "DockerData"
         },
         {
            "container": "/config",
